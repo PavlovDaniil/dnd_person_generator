@@ -1,14 +1,17 @@
-from requests import get
-from json import loads
+from aiogram import Bot, Dispatcher
+from aiogram.fsm.storage.memory import MemoryStorage
+from asyncio import run
+from bot import config, commands
 
-def main():
-    getclasses()
+bot = Bot(config.BOT_TOKEN)
+storage = MemoryStorage()
+dp = Dispatcher()
 
-def getclasses():
-    response = get("https://www.dnd5eapi.co/api/2014/classes/")
-    items = loads(response.text)
-    for item in items["results"]:
-        print(f"{item["name"]}")
+# Запуск процесса поллинга новых апдейтов
+async def main():
+    dp.include_router(commands)
+
+    await dp.start_polling(bot)
 
 if __name__ == "__main__":
-    main()
+    run(main())
