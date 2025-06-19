@@ -9,3 +9,10 @@ def get_classes():
         list_classes.append(item['name'])
     return list_classes
 
+def get_races():
+    response = get("https://www.dnd5eapi.co/api/2014/races/")
+    items = loads(response.text)
+    list_races = []
+    for item in items["results"]:
+        list_races.append(item['name'])
+    return list_races
