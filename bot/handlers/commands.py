@@ -1,5 +1,5 @@
 from aiogram import Router
-from aiogram.fsm.context import FSMContext
+from bot.keyboards.keyboard import start_keyboard
 from aiogram.types import Message
 from aiogram.filters.command import Command
 
@@ -8,7 +8,7 @@ commands = Router()
 
 @commands.message(Command("start"))
 async def cmd_start(message: Message):
-    await message.answer("Hello!")
+    await message.answer("Hello!", reply_markup=start_keyboard)
 
 @commands.message(Command("info"))
 async def cmd_info(message: Message):
