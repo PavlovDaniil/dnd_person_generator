@@ -1,5 +1,5 @@
 from aiogram import Router
-from bot.keyboards.keyboard import start_keyboard
+from bot.keyboards.reply import start_keyboard
 from aiogram.types import Message
 from aiogram.filters.command import Command
 
