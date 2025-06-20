@@ -1,0 +1,76 @@
+{
+  "character_name": "Имя персонажа",
+  "player_name": "Имя игрока",
+  "background": "Предыстория",
+  "class": "Класс",
+  "subclass": "Подкласс",
+  "race": "Вид",
+
+  "armor_class": 15,
+  "hit_points": {
+    "current": 12,
+    "maximum": 12
+  },
+  "hit_dice": "1d10",
+  "proficiency_bonus": 2,
+
+  "attributes": {
+    "strength": 14,
+    "constitution": 13,
+    "dexterity": 16,
+    "wisdom": 10,
+    "intelligence": 12,
+    "charisma": 8
+  },
+
+  "saving_throws": {
+    "strength": true,
+    "constitution": false,
+    "dexterity": true,
+    "wisdom": false,
+    "intelligence": false,
+    "charisma": false
+  },
+
+  "weapons": [
+    {
+      "name": "Меч",
+      "attack_bonus_or_dc": "+5",
+      "damage_and_type": "1d8 + 2 колющее",
+      "description": "Одноручное оружие, можно использовать с щитом"
+    },
+    {
+      "name": "Огненный шар",
+      "attack_bonus_or_dc": "Сл 14",
+      "damage_and_type": "8d6 огонь",
+      "description": "Радиус 6м, все в зоне — спасбросок Ловкости"
+    }
+  ],
+
+  "class_features": [
+    "Второе дыхание",
+    "Боевой стиль: Защита"
+  ],
+
+  "racial_traits": [
+    "Тёмное зрение",
+    "Сопротивление яду"
+  ],
+
+  "feats": [
+    "Меткий стрелок"
+  ],
+
+  "proficiencies_and_skills": {
+    "armor": ["Лёгкие доспехи", "Средние доспехи", "Щиты"],
+    "weapons": ["Простое оружие", "Воинское оружие"],
+    "tools": ["Игра на лютне"],
+    "skills": ["Атлетика", "Запугивание"]
+  },
+
+  "languages": [
+    "Общий",
+    "Гномий",
+    "Эльфийский"
+  ]
+}
